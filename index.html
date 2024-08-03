@@ -87,6 +87,7 @@
             transition: background-color 0.3s ease;
             display: block; /* Make it a block element */
             max-width: 300px; /* Optional: limit the max width */
+			align-self: flex-end;
         }
         .btn:hover {
             background-color: #0056b3;
@@ -97,7 +98,7 @@
 		}
 		
 		.section {
-			padding: 40px 2px;
+			padding: 0px 0px;
 			text-align: center;
 		}
 		
@@ -120,6 +121,7 @@
 			margin: 10px;
 			text-align: center;
 			max-width: 400px; /* Larghezza massima delle singole colonne */
+			flex-direction: column;
 		}
 
 		@media (min-width: 768px) {
@@ -176,8 +178,8 @@
 <body>
     <div class="header"></div>
 	
-		<div class="section" style="background-color: #FAF7EF;">
-			<div class="custom-column">
+		<div class="section" style="background-color: #FAF7EF; padding-bottom:0px">
+		<div class="custom-column">
         <h1>Il nostro Servizio</h1>
         <p>"Web Express" è una piattaforma digitale dove i professionisti e le imprese possono noleggiare un sito vetrina minimizzando i costi della loro presenza online senza dover rinunciare alle funzionalità più importanti.</p>
 			</div>
@@ -198,7 +200,7 @@
 			</div>
 		</body>
 		
-		<div class="section" style="background-color: #C9DEE9;">
+		<div class="section" style="background-color: #C9DEE9; padding-top:20px">
 			<h2>Come Funziona</h2>
 			<div class="columns">
 				<div class="column">
@@ -244,23 +246,33 @@
 				.custom-img {
 					max-width: 80%;
 					height: auto;
+					margin-top: 0px;
+				}
+			
+				@media (max-width: 768px) {
+				.contact-container {
+					flex-direction: column;
+					align-items: center;
+				}
+				.contact-buttons {
 					margin-top: 20px;
 				}
-			</style>
+			}
+		</style>
 		</head>
 		<body>
 			<div class="custom-section" style="background-color: #FAF7EF;">
 				<div class="custom-column">
 					<h2>Consulenza Tecnica</h2>
-					<p>Prenota un appuntamento per spiegarci le tue esigenze e prova gratuitamente uno dei nostri pacchetti per 30 giorni.</p>
-					<img src="images/consulenza-tecnica.jpg" alt="Consulenza Tecnica" class="custom-img">
+					<p>Contattaci per scoprire come Learn-UP può arricchire la tua offerta formativa e migliorare l'esperienza dei tuoi studenti.</p>
+					<img src="images/consulenza-tecnica.jpg" alt="Consulenza Tecnica" class="custom-img" style="max-width:100%">
 					<a href="Prenotazioni.html" class="btn">PRENOTA UNA PROVA GRATUITA</a>
 				</div>
 			</div>
 		</body>
 		</html>
 
-        <div class="section" style="background-color: #C9DEE9;">
+        <div class="section" style="background-color: #C9DEE9; padding-top:20px">
             <h2>Prova Gratuita</h2>
             <div class="columns">
                 <div class="column">
@@ -313,37 +325,25 @@
 			</div>
 		</div>
 		
-		<div class="section" style="text-align: center;">
+		<div class="section" style="text-align: center; width:100%">
 			<h2 style="margin-bottom: 20px;">Contatti</h2>
-			<p>Siamo sempre disponibili per rispondere a qualsiasi richiesta di informazioni. Non esitate a contattarci attraverso i nostri canali disponibili qui di seguito.</p>
-			<div class="contact-container" style="display: flex; flex-wrap: wrap; justify-content: center; max-width: 1200px; margin-left: auto; margin-right: auto; margin-top: 40px;">
+			<p style="padding: 0px 20px;">Siamo sempre disponibili per rispondere a qualsiasi richiesta di informazioni. Non esitate a contattarci attraverso i nostri canali disponibili qui di seguito.</p>
+			<div class="contact-container" style="display: flex; flex-wrap: wrap; justify-content: center; max-width: 1200px; margin-left: auto; margin-right: auto;">
 				<div class="contact-info" style="flex: 1 1 300px; text-align: center; margin-right: 20px;">
-					<img src="images/chiama.jpg" alt="chiama" style="width: 75%; height: auto; margin-top: auto;">
+					<img src="images/chiama.jpg" alt="chiama" style="max-width: 100%; height: auto; margin-top: auto;">
 				</div>
-				<div class="custom-column" style="flex: 1 1 300px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+					<div class="contact-buttons" style="flex: 1 1 300px; display: flex; flex-direction: column; align-items: center; justify-content: center; margin-top: 20px;">
 					<a href="https://wa.me/393482595855?text=Vorrei%20pi%C3%B9%20informazioni%20sul%20vostro%20servizio" class="btn" style="margin-bottom: 30px; width: 300px;">Mandaci un WhatsApp</a>
 					<a href="tel:+393482595855" class="btn" style="margin-bottom: 30px; width: 300px;">Chiamaci Subito</a>
-					<a href="mailto:tapognaniriccardo@gmail.com?cc=goldenopinion.5star@gmail.com&subject=Info" class="btn" style="margin-bottom: 0px; width: 300px;">Mandaci una Mail</a>
+					<a href="mailto:tapognaniriccardo@gmail.com?cc=goldenopinion.5star@gmail.com&subject=Info" class="btn" style="margin-bottom: 30px; width: 300px;">Mandaci una Mail</a>
 				</div>
 			</div>
 		</div>
-		<style>
-			@media (max-width: 768px) {
-				.contact-container {
-					flex-direction: column;
-					align-items: center;
-				}
-				.contact-buttons {
-					margin-top: 20px;
-				}
-			}
-		</style>
-
-    </div>
         <div class="footer">
             <p>Mail: <a href="mailto:tapognaniriccardo@gmail.com?cc=goldenopinion.5star@gmail.com&subject=Info" class="contact-link">tapognaniriccardo@gmail.com</a><br>
 			Cell: <a href="tel:+393482595855" class="contact-link">+39 3482595855</a></p>
             <a href="Privacy.html" class="footer-link">Privacy Policy</a>
         </div>
+	</div>
 </body>
 </html>
